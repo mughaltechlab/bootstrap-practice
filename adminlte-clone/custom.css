@@ -1,0 +1,15 @@
+/* bootstrap icons cdn link */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* navigation links color */
+a.nav-link{
+    color: #fff;
+}
+.badge{
+    position: relative;
+    font-size: .5rem;
+    top: -10px;
+    left: -7px;
+}
+ #bell-badge{
+    left: -12px;
+}
