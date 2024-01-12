@@ -1,6 +1,9 @@
 /* bootstrap icons cdn link */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 /* navigation links color */
+*, ::after, ::before{
+    box-sizing: border-box;
+}
 a.nav-link{
     color: #fff;
 }
@@ -12,4 +15,21 @@ a.nav-link{
 }
  #bell-badge{
     left: -12px;
+}
+#sidebar{
+    width: 246px !important;
+    background: var(--bs-secondary-color) !important;
+}
+/* box */
+.box-one{
+    background: #17a2b8 !important;
+}
+.box-two{
+    background: #28a745 !important;
+}
+.box .footer{
+
+}
+.inner-box i{
+    font-size: 5rem;
 }

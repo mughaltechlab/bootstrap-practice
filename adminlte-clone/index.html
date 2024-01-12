@@ -9,25 +9,152 @@
 </head>
 <body>
 
-    <div class="row">
+    <div class="wraper container-fluid p-0">
+        <div class="row flex-nowrap gx-0">
 
-        <!-- main container for hero section -->
+            <aside id="sidebar" class="collapse collapse-horizontal  col-auto min-vh-100">
+                <div>
+                    <div class="nav-header">
+
+                    </div>
+                </div>   
+            </aside>
+            <div class="main col bg-secondary-subtle">
+                <!-- navigation -->
+                <div class="navbar navbar-expand bg-primary bg-light">
+                    <div class="container-fluid mx-lg-3">
+                        <button class="btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="nav-menu-links">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Home</a>
+                                </li>
+                                <li class="navbar-nav">
+                                    <a href="" class="nav-link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="" class="nav-link"><i class="bi bi-search"></i></a></li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link"><i class="bi bi-chat"></i><span class="badge bg-danger">3</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="bi bi-bell"></i>
+                                    <span class="badge bg-warning" id="bell-badge">15</span></a>
+                            </li>
+                            <li class="nav-item"><a href="" class="nav-link">
+                                <i class="bi bi-arrows-fullscreen" id="move-icon"></i>
+                            </a></li>
+                            <li class="nav-item"><a href="" class="nav-link">
+                                <i class="bi bi-grid"></i>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- content -->
+                <div class="container-fluid">
+                    <!-- row-one -->
+                    <div class="row my-2">
+                        <div class="col-6">
+                            <div class="h3">Dashboard</div>
+                        </div>
+                        <div class="col-6">
+                            <!-- breadcrumb -->
+                            <nav aria-label="breadcrumb">
+                                <ul class="breadcrumb d-flex justify-content-end ">
+                                    <li class="breadcrumb-item active text-primary">Home</li>
+                                    <li class="breadcrumb-item active">Dashboard V1</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- row of 4 boxes -->
+                    <div class="row pt-2">
+                        <!-- col-one -->
+                        <div class="col-lg-3 col-6">
+                            <div class="container box-one .box rounded-2">
+                                <div class="inner-box d-flex justify-content-between align-items-center">
+                                    <div class="box-heading text-white">
+                                        <div class="h2 fw-bold">150</div>
+                                        <div class="h6">New Orders</div>
+                                    </div>
+                                    <i class="bi bi-bag text-body-tertiary opacity-50"></i>
+                                </div>
+                                <div class="footer text-center">
+                                    <a href="#" class="nav-link">More Info <i class="bi bi-arrow-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-two -->
+                        <div class="col-lg-3 col-6">
+                            <div class="container box-two .box rounded-2 bg-success">
+                                <div class="inner-box d-flex justify-content-between align-items-center">
+                                    <div class="box-heading text-white">
+                                        <div class="h2 fw-bold">53%</div>
+                                        <div class="h6">Bounce Rate</div>
+                                    </div>
+                                    <i class="bi bi-bar-chart-fill text-body-tertiary opacity-50"></i>
+                                </div>
+                                <div class="footer text-center">
+                                    <a href="#" class="nav-link">More Info <i class="bi bi-arrow-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-three -->
+                        <div class="col-lg-3 col-6">
+                            <div class="container box-three .box rounded-2 bg-warning">
+                                <div class="inner-box d-flex justify-content-between align-items-center">
+                                    <div class="box-heading">
+                                        <div class="h2 fw-bold">44</div>
+                                        <div class="">Unique Registrations</div>
+                                    </div>
+                                    <i class="bi bi-person-plus-fill text-body-tertiary opacity-50"></i>
+                                </div>
+                                <div class="footer text-center">
+                                    <a href="#" class="nav-link">More Info <i class="bi bi-arrow-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col-four -->
+                        <div class="col-lg-3 col-6">
+                            <div class="container box-four .box rounded-2 bg-danger">
+                                <div class="inner-box d-flex justify-content-between align-items-center">
+                                    <div class="box-heading text-white">
+                                        <div class="h2 fw-bold">65</div>
+                                        <div class="h6">Unique Visitors</div>
+                                    </div>
+                                    <i class="bi bi-pie-chart-fill text-body-tertiary opacity-50"></i>
+                                </div>
+                                <div class="footer text-center">
+                                    <a href="#" class="nav-link">More Info <i class="bi bi-arrow-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="row">
+
         <div class="col container-fluid p-0 m-0">
-            <!-- header -->
-            <!-- sidebar -->
-            <!-- offcanvas sidebar offcanvas-start -->
+           
             <div class="offcanvas offcanvas-start text-bg-dark" id="mySidebar">
                 <div class="offcanvas-head">
-                    <div class="h2">Dashboard</div>
+                    <div class="h2 fw-bold">Dashboard</div>
                 </div>
             </div>
             <div class="navbar navbar-expand bg-primary bg-info">
                 <div class="container-fluid mx-lg-3">
-                    <!-- sidebar menu button -->
                     <button class="btn border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mySidebar" >
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <!-- now we create menu links -->
                     <div class="collapse navbar-collapse" id="nav-menu-links">
                         <ul class="navbar-nav">
                             <li class="nav-item">
@@ -57,12 +184,11 @@
                     </ul>
                 </div>
             </div>
-            <!-- main -->
             <div class="container"></div>
         </div>
 
 
-    </div>
+    </div> -->
 
    
 
