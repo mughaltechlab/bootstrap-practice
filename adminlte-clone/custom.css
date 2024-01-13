@@ -4,7 +4,8 @@
 *, ::after, ::before{
     box-sizing: border-box;
 }
-a.nav-link{
+
+.box a.nav-link{
     color: #fff;
 }
 .badge{
@@ -17,8 +18,32 @@ a.nav-link{
     left: -12px;
 }
 #sidebar{
-    width: 246px !important;
-    background: var(--bs-secondary-color) !important;
+    width: 246px;
+    background: #343a40;
+}
+/* #sidebar{
+    width: 70px;
+} */
+/* inner-sidebar */
+#inner-sidebar .sidebar-header{
+    height: 57px;
+    border-bottom: 1px solid #454d55;
+}
+#user-profile{
+    height: 66px;
+    border-bottom: 1px solid #454d55;
+}
+#sidebar-input::placeholder{
+    color: #c2c7d0;
+}
+#sidebar-input,#sidebar-input-icon{
+    background: #3f474e;
+    color: #fff;
+    border-color: #848a90;
+}
+/* ------------------------ */
+#navbar{
+    height: 57px;
 }
 /* box */
 .box-one{
@@ -28,8 +53,9 @@ a.nav-link{
     background: #28a745 !important;
 }
 .box .footer{
-
+    background: rgba(0, 0, 0, 0.1);
 }
 .inner-box i{
-    font-size: 5rem;
+    font-size: 3.5rem;
+
 }

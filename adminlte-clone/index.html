@@ -12,22 +12,51 @@
     <div class="wraper container-fluid p-0">
         <div class="row flex-nowrap gx-0">
 
-            <aside id="sidebar" class="collapse collapse-horizontal  col-auto min-vh-100">
-                <div>
-                    <div class="nav-header">
-
+            <aside id="sidebar" class="collapse show collapse-horizontal  col-auto min-vh-100 ">
+                <div id="inner-sidebar">
+                    <!-- sidebar header -->
+                    <li class="sidebar-header nav">
+                        <div class="container text-white d-flex align-items-center ">
+                            <i class="bi bi-person-circle fs-3"></i> <span class="headre-title fs-5 fw-light ms-2">AdminLTE3</span>
+                        </div>
+                    </li>
+                    <!-- list of items and user title -->
+                    <div class="sidebar-items px-2">
+                        <!-- user title / pic -->
+                        <li class="nav mb-3" id="user-profile">
+                            <div class="container text-white d-flex align-items-center p-1">
+                                <i class="bi bi-person-circle fs-3"></i> <span class="headre-title   ms-2">Alexander Pierce</span>
+                            </div>
+                        </li>
+                        <!-- search input -->
+                        <div class="input-group mb-2">
+                            <input type="text" name="" id="sidebar-input" class="form-control" placeholder="Search" >
+                            <span class="input-group-text" id="sidebar-input-icon"><i class="bi bi-search"></i></span>
+                        </div>
+                        <ul class="nav nav-pills">
+                            
+                        </ul>
+                        <!--accordion -->
+                        <div class="accordion rounded-2">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button type="button" class="accordion-button rounded-2" data-bs-toggle="collapse" data-bs-target="#dashboard-accordion" >Dashboard</button>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>   
             </aside>
             <div class="main col bg-secondary-subtle">
                 <!-- navigation -->
-                <div class="navbar navbar-expand bg-primary bg-light">
+                <div class="navbar navbar-expand bg-primary bg-light" id="navbar">
                     <div class="container-fluid mx-lg-3">
                         <button class="btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" >
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="nav-menu-links">
-                            <ul class="navbar-nav">
+                        <div class="navbar-collapse" id="nav-menu-links">
+                            <ul class="navbar-nav d-none d-md-flex">
                                 <li class="nav-item">
                                     <a href="" class="nav-link">Home</a>
                                 </li>
@@ -56,7 +85,7 @@
                     </div>
                 </div>
                 <!-- content -->
-                <div class="container-fluid">
+                <div class="container-fluid min-vh-100">
                     <!-- row-one -->
                     <div class="row my-2">
                         <div class="col-6">
@@ -76,7 +105,7 @@
                     <div class="row pt-2">
                         <!-- col-one -->
                         <div class="col-lg-3 col-6">
-                            <div class="container box-one .box rounded-2">
+                            <div class="container box-one box rounded-2">
                                 <div class="inner-box d-flex justify-content-between align-items-center">
                                     <div class="box-heading text-white">
                                         <div class="h2 fw-bold">150</div>
@@ -91,7 +120,7 @@
                         </div>
                         <!-- col-two -->
                         <div class="col-lg-3 col-6">
-                            <div class="container box-two .box rounded-2 bg-success">
+                            <div class="container box-two box rounded-2 bg-success">
                                 <div class="inner-box d-flex justify-content-between align-items-center">
                                     <div class="box-heading text-white">
                                         <div class="h2 fw-bold">53%</div>
@@ -106,7 +135,7 @@
                         </div>
                         <!-- col-three -->
                         <div class="col-lg-3 col-6">
-                            <div class="container box-three .box rounded-2 bg-warning">
+                            <div class="container box-three box rounded-2 bg-warning">
                                 <div class="inner-box d-flex justify-content-between align-items-center">
                                     <div class="box-heading">
                                         <div class="h2 fw-bold">44</div>
@@ -121,7 +150,7 @@
                         </div>
                         <!-- col-four -->
                         <div class="col-lg-3 col-6">
-                            <div class="container box-four .box rounded-2 bg-danger">
+                            <div class="container box-four box rounded-2 bg-danger">
                                 <div class="inner-box d-flex justify-content-between align-items-center">
                                     <div class="box-heading text-white">
                                         <div class="h2 fw-bold">65</div>
