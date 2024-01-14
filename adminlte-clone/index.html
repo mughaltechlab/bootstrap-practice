@@ -12,8 +12,8 @@
     <div class="wraper container-fluid p-0">
         <div class="row flex-nowrap gx-0">
 
-            <aside id="sidebar" class="collapse show collapse-horizontal  col-auto min-vh-100 ">
-                <div id="inner-sidebar">
+            <aside id="sidebar" class="sidebar transition col-auto min-vh-100 position-relative overflow-hidden">
+                <div id="inner-sidebar" class=" align-items-center justify-content-center d-flex flex-column">
                     <!-- sidebar header -->
                     <li class="sidebar-header nav">
                         <div class="container text-white d-flex align-items-center ">
@@ -21,7 +21,7 @@
                         </div>
                     </li>
                     <!-- list of items and user title -->
-                    <div class="sidebar-items px-2">
+                    <div class="sidebar-items px-2 ">
                         <!-- user title / pic -->
                         <li class="nav mb-3" id="user-profile">
                             <div class="container text-white d-flex align-items-center p-1">
@@ -29,21 +29,215 @@
                             </div>
                         </li>
                         <!-- search input -->
-                        <div class="input-group mb-2">
+                        <div class="input-group mb-2 ">
                             <input type="text" name="" id="sidebar-input" class="form-control" placeholder="Search" >
                             <span class="input-group-text" id="sidebar-input-icon"><i class="bi bi-search"></i></span>
                         </div>
                         <ul class="nav nav-pills">
-                            
+                            <!--dashboard accordion -->
+                            <li class="nav-item w-100">
+                                <a href="" class="nav-link active d-flex gap-2" role="button" data-bs-toggle="collapse" data-bs-target="#dashboard-accordion">
+                                    <i class="bi bi-speedometer2"></i>
+                                    <p class="d-flex justify-content-between w-100 m-0 ">
+                                        <span>Dashboard</span><span><i class="bi bi-chevron-down"></i></span>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-pills  collapse show " id="dashboard-accordion">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link active bg-secondary-subtle text-dark d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Dashboard v1</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Dashboard v2</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Dashboard v3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- widget item -->
+                            <li class="nav-item"><a href="" class="nav-link d-flex gap-2">
+                                <i class="bi bi-grid-3x3-gap-fill"></i>
+                                <p class="my-para d-flex justify-content-between w-100 align-items-center m-0 position-relative">
+                                   <span> Widgets </span><span class="badge bg-danger position-absolute top-50 translate-middle start-100">new</span>
+                                </p>
+                            </a></li>
+                            <!--layout accordion -->
+                            <li class="nav-item w-100">
+                                <a href="" class="nav-link d-flex gap-2" role="button" data-bs-toggle="collapse" data-bs-target="#dashboard-layout-opt">
+                                    <i class="bi bi-file-earmark-fill"></i>
+                                    <p class="d-flex justify-content-between w-100 m-0 ">
+                                        <span>Layout Options</span><span class="position-relative"><span class="badge bg-info position-absolute" id="layout-badge">6</span> <i class="bi bi-chevron-down"></i></span>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-pills  collapse" id="dashboard-layout-opt">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Top Navigation</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Top Navigaiton + Sidebar</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Boxed</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Fixed Sidebar + <span style="font-size: 12px;">Custom Area</span></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Fixed Navbar</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Fixed Footer</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Collapsed Footer</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--charts accordion -->
+                            <li class="nav-item w-100">
+                                <a href="" class="nav-link d-flex gap-2" role="button" data-bs-toggle="collapse" data-bs-target="#dashboard-charts">
+                                    <i class="bi bi-pie-chart-fill"></i>
+                                    <p class="d-flex justify-content-between w-100 m-0 ">
+                                        <span>Charts</span><span><i class="bi bi-chevron-down"></i></span>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-pills  collapse  " id="dashboard-charts">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>ChartJs</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Flot</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Inline</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>uPlot</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--ui elements accordion -->
+                            <li class="nav-item w-100">
+                                <a href="" class="nav-link d-flex gap-2" role="button" data-bs-toggle="collapse" data-bs-target="#dashboard-ui-elements">
+                                    <i class="bi bi-tree-fill"></i>
+                                    <p class="d-flex justify-content-between w-100 m-0 ">
+                                        <span>UI Elements</span><span><i class="bi bi-chevron-down"></i></span>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-pills  collapse  " id="dashboard-ui-elements">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>General</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Icons</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Buttons</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Sliders</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--forms accordion -->
+                            <li class="nav-item w-100">
+                                <a href="" class="nav-link d-flex gap-2" role="button" data-bs-toggle="collapse" data-bs-target="#dashboard-forms">
+                                    <i class="bi bi-calendar2-check-fill"></i>
+                                    <p class="d-flex justify-content-between w-100 m-0 ">
+                                        <span>Forms</span><span><i class="bi bi-chevron-down"></i></span>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-pills  collapse  " id="dashboard-forms">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>General</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Icons</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Buttons</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Sliders</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--tables accordion -->
+                            <li class="nav-item w-100">
+                                <a href="" class="nav-link d-flex gap-2" role="button" data-bs-toggle="collapse" data-bs-target="#dashboard-tables">
+                                    <i class="bi bi-table"></i>
+                                    <p class="d-flex justify-content-between w-100 m-0 ">
+                                        <span>Tables</span><span><i class="bi bi-chevron-down"></i></span>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-pills  collapse  " id="dashboard-tables">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>General</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Icons</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Buttons</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link d-flex gap-2">
+                                            <i class="bi bi-circle"></i><span>Sliders</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
-                        <!--accordion -->
-                        <div class="accordion rounded-2">
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <button type="button" class="accordion-button rounded-2" data-bs-toggle="collapse" data-bs-target="#dashboard-accordion" >Dashboard</button>
-                                </div>
-                            </div>
-                        </div>
                         
                     </div>
                 </div>   
@@ -52,7 +246,7 @@
                 <!-- navigation -->
                 <div class="navbar navbar-expand bg-primary bg-light" id="navbar">
                     <div class="container-fluid mx-lg-3">
-                        <button class="btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" >
+                        <button class="sidebar-btn btn border-0" type="button" data-bs-target="#sidebar" >
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="navbar-collapse" id="nav-menu-links">
@@ -222,5 +416,7 @@
    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
 </body>
 </html>

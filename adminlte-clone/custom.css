@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+.transition{
+    transition: all .35s ease-in-out;
+}
 .box a.nav-link{
     color: #fff;
 }
@@ -17,13 +20,19 @@
  #bell-badge{
     left: -12px;
 }
-#sidebar{
+.sidebar{
     width: 246px;
+    /* width: 75px; */
     background: #343a40;
 }
-/* #sidebar{
+.span{
+    display: block;
+}
+.span-none{display: none;}
+.sidebar-toggle{
     width: 70px;
-} */
+    background: #343a40;
+}
 /* inner-sidebar */
 #inner-sidebar .sidebar-header{
     height: 57px;
@@ -41,6 +50,26 @@
     color: #fff;
     border-color: #848a90;
 }
+#inner-sidebar li{
+    width: 100%;
+    margin: 3px 0;
+}
+#inner-sidebar a.nav-link{
+    color: #f1f1f1;
+    width: 100%;
+}
+#inner-sidebar a.nav-link:hover{
+    background: hsla(210, 5%, 54%,20%);
+}
+#dashboard-layout-opt span{
+    font-size: 15px;
+}
+#inner-sidebar .badge{
+    top: 5px;
+    left: -30px;
+    font-size: 10px;
+}
+
 /* ------------------------ */
 #navbar{
     height: 57px;
