@@ -12,12 +12,12 @@
     <div class="wraper container-fluid p-0">
         <div class="row flex-nowrap gx-0">
 
-            <aside id="sidebar" class="sidebar transition col-auto min-vh-100 position-relative overflow-hidden">
+            <aside id="sidebar" class="sidebar transition col min-vh-100 overflow-x-hidden ">
                 <div id="inner-sidebar" class=" align-items-center justify-content-center d-flex flex-column">
                     <!-- sidebar header -->
                     <li class="sidebar-header nav">
-                        <div class="container text-white d-flex align-items-center ">
-                            <i class="bi bi-person-circle fs-3"></i> <span class="headre-title fs-5 fw-light ms-2">AdminLTE3</span>
+                        <div class="container-fluid text-white d-flex align-items-center gap-2">
+                            <i class="bi bi-person-circle fs-3"></i> <span class="headre-title w-100 fs-5 fw-light ">AdminLTE3</span>
                         </div>
                     </li>
                     <!-- list of items and user title -->
@@ -33,7 +33,7 @@
                             <input type="text" name="" id="sidebar-input" class="form-control" placeholder="Search" >
                             <span class="input-group-text" id="sidebar-input-icon"><i class="bi bi-search"></i></span>
                         </div>
-                        <ul class="nav nav-pills">
+                        <ul class="nav nav-pills overflow-y-scroll">
                             <!--dashboard accordion -->
                             <li class="nav-item w-100">
                                 <a href="" class="nav-link active d-flex gap-2" role="button" data-bs-toggle="collapse" data-bs-target="#dashboard-accordion">
@@ -239,6 +239,7 @@
                             </li>
                         </ul>
                         
+                        <div class="flex-grow-1"></div>
                     </div>
                 </div>   
             </aside>
