@@ -83,7 +83,7 @@ var form = document.querySelector('form');
 
 
 form.addEventListener('submit',()=>{
-    event.preventDefault;
+    // Event.preventDefault;
     var answer = confirm('namaz prhta b hai..')
     if(answer){
         alert('achi baat hai');
@@ -111,9 +111,9 @@ form.addEventListener('submit',()=>{
 var body = document.querySelector('body');
 var btn = document.querySelector('.bg-btn');
 
-var userN = document.getElementById('name');
-var msg = prompt('what is your good name');
-userN.innerHTML = msg;
+// var userN = document.getElementById('name');
+// var msg = prompt('what is your good name');
+// userN.innerHTML = msg;
 
 btn.addEventListener('click',  function myFunction(){
     if( body.style.background == 'yellow'){
@@ -137,3 +137,28 @@ btn.addEventListener('click',  function myFunction(){
 //     // function
 // );
 
+
+// using modulus check time am or pm;
+var num = 5;
+var p = 12;
+var inpNum = document.getElementById("time");
+var disTime = document.querySelector(".d-time");
+var disTime = document.querySelector(".time-btn");
+
+if (num > p ) {
+    var t = num % p ;
+
+    console.log(t + 'pm');
+}else console.log(num + 'am');
+
+// find even or odd number using loop
+var even = document.querySelector('.even');
+var odd = document.querySelector('.odd');
+for(let i = 1 ; i<=10 ; i++){
+    var od = (i % 2 == 0);
+    if (!od) {
+        console.log(i + ' even');
+    }else if (od) {
+        console.log(i + ' odd');
+    }else console.log('invalid num');
+}
