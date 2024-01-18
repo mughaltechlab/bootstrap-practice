@@ -145,6 +145,8 @@ var inpNum = document.getElementById("time");
 var disTime = document.querySelector(".d-time");
 var disTime = document.querySelector(".time-btn");
 
+
+
 if (num > p ) {
     var t = num % p ;
 

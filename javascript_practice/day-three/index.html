@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript assignment</title>
+</head>
+<body>
+    
+
+    <script>
+        // loop 
+        
+        // for(var i = 1 ; i <=10 ; i++){
+        //     console.log(i);
+        // }
+
+        // for(var i = 10 ; i >= 1 ; i--){
+        //     console.log(i);
+        // }
+
+        // odd
+        // for(var i = 1 ; i <= 10 ; i++){
+        //     var  even = (i%2) ==   0 ;
+        //     if ( !even  ) {
+        //         console.log(i);
+        //     }
+        // }
+        
+        // even
+        // for(var i = 10 ; i >= 1 ; i--){
+        //     var  even = (i%2) ==   0 ;
+        //     if ( even  ) {
+        //         console.log(i);
+        //     }
+        // }
+
+        // pattern
+        
+        // for(var i = 1 ; i < 5 ; i++){
+        //     document.write("* <br>");
+        // }
+        
+        // *
+        // **
+        // ***
+        // ****
+        // for(var i = 1 ; i <= 4 ; i++){
+        //     for(var j = 1; j<=i ; j++ ){
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        //    *
+        //   **
+        //  ***
+        // ****
+        
+        // for(var i = 1 ; i <= 4 ; i++){
+        //     for( var s = 4; s>=i; s--){
+        //     document.write("&nbsp ");
+        // }
+        //     for(var j = 1; j<=i ; j++ ){
+                
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        //    *
+        //   * *
+        //  * * *
+        // * * * *
+        // for(var i = 1 ; i <= 4 ; i++){
+        //     for( var s = 4; s>=i; s--){
+        //     document.write("&nbsp");
+        // }
+        //     for(var j = 1; j<=i ; j++ ){
+                
+        //         document.write(" *");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // 1
+        // 12
+        // 123
+        // 1234
+        // 12345
+        // for(var i = 1 ; i<= 5 ; i++){
+        //     for(var j = 1; j <= i ; j++){
+        //         document.write(j);
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // 1
+        // 23
+        // 456
+        // for(var i = 1 ; i<=5 ; i++){
+        //     for(var j = i ; j<=i ; j++){
+        //     document.write(i);
+
+        //     }
+        //     document.write("<br>");
+
+        // }
+
+        // _____--FUNCTION--______
+
+        // even or odd
+        // function evenOrOdd (num){
+        //     if (num%2 == 0) {
+        //         document.write(num + " is odd number ");
+        //     } else {
+        //         document.write(num + " is even number ");
+        //     }
+        // }
+        // evenOrOdd(12); 
+        
+        // modulus func
+        // function modFunc(num){
+        //     var mod = num % 2;
+        //     return mod;
+        // }
+        // var num = 4;
+        // var checkingMod = modFunc(num);
+        // document.write(num + " modulus by 2 is: " + "<b>" + checkingMod + "</b>");
+        
+        // calculator
+        // function calculator(num1, num2, operator){
+        //     if(operator == '+'){
+        //         var a = num1 + num2;
+        //         document.write(num1 + " + " + num2 + " = " + a);
+        //     }else if(operator == '-'){
+        //         var a = num1 - num2;
+        //         document.write(num1 + " - " + num2 + " = " + a);
+        //     }else if(operator == '*'){
+        //         var a = num1 * num2;
+        //         document.write(num1 + " * " + num2 + " = " + a);
+        //     }else if(operator == '/'){
+        //         var a = num1 / num2;
+        //         document.write(num1 + " / " + num2 + " = " + a);
+        //     }else if(operator == '**'){
+        //         var a = num1 ** num2;
+        //         document.write(num1 + " ** " + num2 + " = " + a);
+        //     }else if(operator == '%'){
+        //         var a = num1 % num2;
+        //         document.write(num1 + " % " + num2 + " = " + a);
+        //     }else {
+        //         document.write('invalid')
+        //     }
+        // }
+        // calculator(2,3,'**');
+        
+        // addition
+        // function sum(num1, num2){
+        //     var a = num1 + num2;
+        //     document.write(num1 + " + " + num2 + " = " + a + "<br>");
+        // }
+        // // subtract
+        // function sub(num1, num2){
+        //     var a = num1 - num2;
+        //     document.write(num1 + " - " + num2 + " = " + a + "<br>");
+        // }
+        // // multiply
+        // function multiply(num1, num2){
+        //     var a = num1 * num2;
+        //     document.write(num1 + " * " + num2 + " = " + a + "<br>");
+        // }
+        //  // division
+        //  function divide(num1, num2){
+        //     var a = num1 / num2;
+        //     document.write(num1 + " / " + num2 + " = " + a + "<br>");
+        // }
+        //  // modulus
+        //  function modulus(num1, num2){
+        //     var a = num1 % num2;
+        //     document.write(num1 + " % " + num2 + " = " + a + "<br>");
+        // }
+        //  // exponential
+        //  function exponential(num1, num2){
+        //     var a = num1 ** num2;
+        //     document.write(num1 + " ** " + num2 + " = " + a + "<br>");
+        // }
+        // sum(2,2);
+        // sub(2,2);
+        // multiply(2,2);
+        // divide(2,2);
+        // modulus(2,2);
+        // exponential(2,2);
+
+           
+
+    </script>
+</body>
+</html>
