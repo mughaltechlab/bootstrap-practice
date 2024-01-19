@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Functions in JScript</title>
+    <style>
+        body{
+            background: #000;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // functions
+        var myArr = [100,20,3,400,-5,2500.55, 0, 66000, 3000];
+        // max value
+        max(myArr);
+        function max(arr = []){
+            var fakeArr = arr[0];
+           for(var i = 0; i<arr.length ; i++){
+            if (arr[i] > fakeArr) {
+                fakeArr = arr[i];
+            }
+        }
+        document.write("<b style='color:#0c1'>" +fakeArr + "</b><br>");
+        }
+        // min value
+        min(myArr);
+        function min(arr = []){
+            var fakeArr = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                
+                if (arr[i] < fakeArr) {
+                    fakeArr = arr[i];
+                }
+            }
+        document.write("<b>" +fakeArr + "</b><br>");
+
+        }
+
+    </script>
+</body>
+</html>
