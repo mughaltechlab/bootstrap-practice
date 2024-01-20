@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS practice day-4 19jan</title>
 </head>
+<style>
+    body{
+        background: #000;
+        color: crimson;
+        font-family: monospace;
+        font-size: 1rem;
+    }
+</style>
 <body>
     
 
@@ -21,7 +29,7 @@
 
         // array splice method
         // splice( starting index, deleting value(if not so put 0 here. ) )
-        document.write(arr.splice(1,1,'ghareeb')  + ` <=splice(1,1,'ghareeb') : &nbsp; & our array is <b> ${arr} </b> <br>`);
+        document.write(arr.splice(1,1,'ghareeb')  + ` <=splice(1,1,'ghareeb') : &nbsp; & our array is <b style="color:#0cc ; letter-spacing:1px" > ${arr} </b> <br>`);
 
         // isArray() method : Array.isArray(arr) = true
         document.write( Array.isArray(arr) + "<br>");
@@ -42,16 +50,17 @@
         );
 
         // includes() methods only give true or false and it is Case sensitive also
-        document.write( arr.includes('no') + " " + arr.includes('invalid') + "<br>");
+        document.write("<span style='color:#0c1'> " + arr.includes('no') + "</span> " + arr.includes('invalid') + "<br>");
 
 // -------------------------some(),----every()----------------------------
 
         // some( function() ) check if any of the elements in an array pass the test
-        // we make checking func in the some() and if it find one element which match our condition so it return that element. it didn't go forward after that.
+        // we make checking func in the some() and if it find one element which match our condition so it return true otherwise false. it didn't go forward after that.
         arr = [6, 8 , 9, 12 ,15];
         document.write(
+            "<span style='color:#0c1'> " +
             arr.some((age)=>{return age>=12})
-            + "<br>"
+            + "</span> <br>"
             );
         // every() same as some() but it check all elements if all elements match the condition so it'll return true otherwise false
         arr = [6, 8 , 9, 12 ,15];
@@ -71,8 +80,44 @@
         document.write(
             arr.findIndex((age)=>{return age>=12})
             );
+// ----------------------------------filter()--------------------------------------
+        // filter() method search on every element of an array which match our condition so it will return all of them in new array.
+        bArray = arr.filter((age)=>{
+            return age>=12;
+        });
+        document.write("<br><span style='color:violet '> " + bArray + "</span><br>");
+         
+// --------------------------------***********--------------------------------------
+// ----------------------------------object--------------------------------------
+        document.write("-------object--------")
+        a = {
+            name : "Lone Wolf",
+            work : {
+                morning : 'Teacher',
+                evening : 'Developer',
+                night : 'Gym Trainer'
+            }
+        };
+        document.write("<p style = 'color: yellow' >");
+        document.write(a.name + "<br>");
+        document.write(a.work.morning + "<br>");
+        document.write("</p>");
 
-        
+        // second way of define object and declare their properties
+        b = new Object();
+        b.AgentName = "Alexander";
+        b.AgentBranch = "Alexander";
+// ----------------------------------for in Loop--------------------------------------
+        for (const key in a) {
+            document.write("<p style = 'color: yellow' >");
+            document.write(key + "<br>");
+            document.write("</p>");
+        }
+        for (const key in b) {
+            document.write("<p style = 'color: orange' >");
+            document.write(key + "<br>");
+            document.write("</p>");
+        }
 
        
 
