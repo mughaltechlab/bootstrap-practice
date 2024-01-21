@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number methods| </title>
+    <style>
+        body{
+        background: #000;
+        color: crimson;
+        font-family: monospace;
+        font-size: 1rem;
+    }
+    td{
+        border: 1px dashed yellow;
+        padding: 10px 30px;
+    }
+    </style>
+</head>
+<body>
+    
+    <script>
+        /**
+        * !------------Number Methods-----------------
+        */      
+        document.write("<table style = 'border-collapse: collapse ;border: 1px solid #66ff33; margin-inline:auto;' >");
+        document.write("<tr><td colspan = '3' style = ' text-align:center ;border: 1px dashed #66ff33; padding:5px 30px '> <h2> Number Method </h2> </td></tr> <tr>");
+        /**
+         * * Number() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write("Number(num)");
+        document.write("</td>");
+        document.write("<td>");
+
+        var num = "99";
+        document.write("num='99' <br> Number(num) convert it into number");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b> Number(num)+1=<br>"+ (Number(num)+1) +"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * parseInt(), parseFloat() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write("parseInt(num) <br> parseFloat(num)");
+        document.write("</td>");
+        document.write("<td>");
+
+        var num = "99.87";
+        document.write("num='99.99' <br>");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ parseInt(num)+ "<br>"+ parseFloat(num) +"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * Number.isFinite(), Number.isInteger() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write("Number.isFinite(num) <br> Number.isInteger(num)");
+        document.write("</td>");
+        document.write("<td>");
+
+        var num = "99.77";
+        document.write("num='99.99' <br>");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ Number.isFinite(num)+ "<br>"+ Number.isInteger(num) +"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * toFixed(), Number.toPrecision() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write("num,toFixed(2) <br> num.toPrecision(3)");
+        document.write("</td>");
+        document.write("<td>");
+
+        var num = 55.55686;
+        document.write("num='99.99' <br>");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+  num.toFixed(2)+ "<br>"+ num.toPrecision(3) +"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+
+        
+        doucment.write("</tr></table>");
+
+        
+    </script>
+</body>
+</html>
