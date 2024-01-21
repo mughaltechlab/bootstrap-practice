@@ -14,6 +14,7 @@
     td{
         border: 1px dashed yellow;
         padding: 10px 30px;
+        margin: 0 auto;
     }
     </style>
 </head>
@@ -88,12 +89,138 @@
         document.write("<td style='color: #ff33ff'>");
         document.write("<b>"+  num.toFixed(2)+ "<br>"+ num.toPrecision(3) +"</b>");
         document.write("</td>");
-        document.write("</tr>");
+        document.write("</tr> </table>");
+        document.write("<br>");
 
+        /**
+        * !------------Math Methods-----------------
+        */      
+        document.write("<table style = 'border-collapse: collapse ;border: 1px solid #66ff33; margin-inline:auto;' >");
+        document.write("<tr><td colspan = '3' style = ' text-align:center ;border: 1px dashed #66ff33; padding:5px 30px '> <h2> Math Method </h2> </td></tr> <tr>");
+        /**
+         * * .ceil(), .floor() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write(".ceil(num) <br> .floor(num)");
+        document.write("</td>");
+        document.write("<td>");
+
+        var num = 99.87;
+        document.write("num= 99.87 <br>");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ Math.ceil(num)+ "<br>"+ Math.floor(num) +"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * .round(), .trunc() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write(".round(num) <br> .trunc(num)");
+        document.write("</td>");
+        document.write("<td>");
+
+        var num = 44.56;
+        document.write("num= 44.56 <br>");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ Math.round(num)+ "<br>"+ Math.trunc(num) +"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * .max(), .min() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write(".max(num) <br> .min(num)");
+        document.write("</td>");
+        document.write("<td>");
+
+        document.write("Math.max(2,4,6,7) <br> Math.min(2,4,6,7) <br>");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ Math.max(2,4,6,7)+ "<br>"+ Math.min(2,4,6,7) +"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * .sqrt(), .cbrt() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write(".sqrt() <br> .cbrt()");
+        document.write("</td>");
+        document.write("<td>");
+
+        document.write("Math.sqrt(9) <br> Math.cbrt(8) <br>");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ Math.sqrt(9)+ "<br>"+ Math.cbrt(8) +"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * .pow(x,y) method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write(".pow(x,y)");
+        document.write("</td>");
+        document.write("<td>");
+
+        document.write("Math.pow(5,3)");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ Math.pow(5,3)+"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * .random() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write(".random()");
+        document.write("</td>");
+        document.write("<td>");
+
+        document.write("Math.random() <br> Math.floor(Math.random() * 10)+1");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ Math.random()+ "<br>"+ (Math.floor(Math.random() * 10)+1) +"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * .abs() method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write(".abs()");
+        document.write("</td>");
+        document.write("<td>");
+
+        document.write(" Math.abs(-55) <br>  Math.abs('hello') <br>  Math.abs('88')");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ Math.abs(-55)+ "<br>"+ Math.abs("hello") + "<br>"+ Math.abs("88")+"</b>");
+        document.write("</td>");
+        document.write("</tr>");
+        /**
+         * * Math.PI method
+        */
+        document.write("<td style='color: #ff33ff'>");
+        document.write("Math.PI");
+        document.write("</td>");
+        document.write("<td>");
+
+        document.write("Math.PI");
+        document.write("</td>");
+
+        document.write("<td style='color: #ff33ff'>");
+        document.write("<b>"+ Math.PI+"</b>");
+        document.write("</td>");
+        document.write("</tr>");
         
         doucment.write("</tr></table>");
-
-        
     </script>
 </body>
 </html>
