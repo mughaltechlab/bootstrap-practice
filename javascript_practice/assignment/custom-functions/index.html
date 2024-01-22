@@ -41,22 +41,29 @@
 
         }
         // sort an array by function
-        // var myArr = [1,4,3,5,2,6];
-        // sort(myArr);
-        // function sort(arr = []){
-        //     fakeArr = [];
-        //     fakeElement = arr[0];
-            
-        //     for(let i = 0; i < arr.length ; i++){
-        //         arr.forEach(element => {
-        //             if (fakeElement > element) {
-                        
-        //             }
-        //         });
-        //     }
-
-        //     document.write(fakeArr);
-        // }
+        /**
+         * todo:!. swaping logic
+        if(arr[i] > arr[i+1]){
+          el = arr[i];
+          arr[i] = arr[i+1];
+          arr[i+1] = el
+        }
+        */
+        var myArr = [290, 128, 80, 65, 69, -1];
+        el = 0;
+        for (i = 0; i < arr.length; i++) {
+            for (j = 0; j < arr.length; j++) {
+                if (arr[j] > arr[i + 1]) {
+                    //      el(0) = 290 first time
+                    el = arr[j];
+                    //       arr[0] = 128 first time
+                    arr[j] = arr[i + 1];
+                    // arr[1] = 290 first time
+                    arr[i + 1] = el;
+                }
+            }
+        }
+        document.write(arr);
 
 
 
