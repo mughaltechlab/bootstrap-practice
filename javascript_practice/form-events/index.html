@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events | JScript practice</title>
+    <style>
+        body{
+            background: #000;
+            color: crimson;
+        }
+        .clock{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 1px solid #85fe22;
+            width: 300px;
+            height: 100px;
+        }
+        .time{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 200px;
+        }
+        #sec, #min, #hour{
+            border: 1px solid;
+            padding: 10px;
+            margin: 2px 6px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="clock">
+        <div class="time">
+            <span id="hour"></span>:
+            <span id="min"></span>:
+            <span id="sec"></span>
+        </div>
+    </div>
+   
+
+
+    <script>
+
+        let secSpan = document.getElementById('sec');
+        let minSpan = document.getElementById('min');
+        let hrSpan = document.getElementById('hour');
+        /**
+         * *------------- DATE
+        */
+        let d = new Date();
+        sec = d.getSeconds();
+
+        setInterval(updateTime, 1000);
+
+        function updateTime(){
+            let dNow = new Date();
+            secSpan.innerHTML = dNow.getSeconds();
+            minSpan.innerHTML = dNow.getMinutes();
+            hrSpan.innerHTML = dNow.getHours();
+        }
+        // secSpan.innerHTML =   ;
+
+
+
+
+        
+    </script>
+</body>
+</html>
