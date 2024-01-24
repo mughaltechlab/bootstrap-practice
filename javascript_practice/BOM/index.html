@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM | Browser Object Module</title>
+    <style>
+        body{
+            background: #000;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- * BOM | Browser Object Module -->
+    <!-- 
+        * The Browser Object Model (BOM) is a collection of objects exposed by the browser that allow JavaScript to interact with the browser window, document, and other browser-specific functionalities.
+        * The BOM includes objects such as Window, Navigator, Location, History, and Screen.
+     -->
+    <!-- * window.innerHeight -->
+    <button id="openWin">OPEN WINDOW</button>
+    <button id="closeWin">CLOSE WINDOW</button>
+
+
+    <script>
+
+            openbtn = document.querySelector('#openWin');
+            closebtn = document.querySelector('#closeWin');
+            var newWin;
+            openbtn.addEventListener('click',()=>{
+               newWin = window.open("https://www.w3schools.com","", "width=500px,height=200px, left=500px, top=400px");
+            });
+            closebtn.addEventListener('click',()=>{
+                newWin.close();
+            })
+
+
+            winH = window.innerHeight;
+            winW = window.innerWidth;
+            document.write(`<br> window inner height: ${winH} <br> window inner width: ${winW}`);
+       
+        
+    </script>
+    
+
+</body>
+</html>
