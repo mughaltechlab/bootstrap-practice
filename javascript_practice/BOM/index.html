@@ -21,18 +21,36 @@
     <!-- * window.innerHeight -->
     <button id="openWin">OPEN WINDOW</button>
     <button id="closeWin">CLOSE WINDOW</button>
+    <button id="resizeToWin">ReSIZE TO WINDOW</button>
 
 
     <script>
 
+            // btn
             openbtn = document.querySelector('#openWin');
             closebtn = document.querySelector('#closeWin');
+            resizeTobtn = document.querySelector('#resizeToWin');
+            // window variable
             var newWin;
+
+            // open btn eventListener
             openbtn.addEventListener('click',()=>{
-               newWin = window.open("https://www.w3schools.com","", "width=500px,height=200px, left=500px, top=400px");
+               newWin = window.open("","", "width=500px,height=200px, left=500px, top=400px");
+               newWin.document.write("<p>BOM | NEW WINDOW<p>");
             });
+            // close btn eventListener
             closebtn.addEventListener('click',()=>{
                 newWin.close();
+            })
+            // resizeTo() btn eventListener (this function do accurate resize)
+            resizeTobtn.addEventListener('click',()=>{
+                newWin.resizeTo(400,400) ;
+                newWin.focus();
+            })
+            // resizeBy() btn eventListener (this function plus thier values to actual size)
+            resizeTobtn.addEventListener('click',()=>{
+                newWin.resizeTo(400,400) ;
+                newWin.focus();
             })
 
 
