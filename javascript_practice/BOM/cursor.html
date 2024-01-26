@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor background</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: #013;
+        width: 100vw;
+        height: 100vh;
+    }
+    .cursor{
+        display: none;
+        background: aqua;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        opacity: .2;
+        position: fixed;
+        animation: bgChanger 2s infinite;
+    }
+    @keyframes bgChanger {
+        25%{ background: yellowgreen; }
+        50%{ background: rgb(205, 102, 50); }
+        75%{ background: rgb(50, 179, 205); }
+        100%{ background: rgb(205, 50, 117); }
+    }
+</style>
+<body>
+    <div class="cursor"></div>
+
+    <script>
+        let cursor = document.querySelector('.cursor');
+       
+        window.addEventListener('mousemove' , (e)=>{
+            // get mouse coordinates
+            let x = e.clientX - 20;
+            let y = e.clientY - 20;
+            console.clear();
+            console.log(x + " " + y);
+            // set mouse coordinates to div.cursor position 
+            cursor.style.top = y + 'px';
+            cursor.style.left = x + 'px';
+        });
+        document.body.addEventListener('mouseenter',()=>{
+            console.log('enter');
+            cursor.style.display = 'block';
+        });
+        document.body.addEventListener('mouseleave',()=>{
+            console.log('leave');
+            cursor.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
