@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JS | spread operator</title>
+</head>
+<body>
+    <!-- * Spread Operator ( ... ) -->
+
+    <script>
+
+        let arr = [10,20,30];
+        // using sumFunc without spread operator (...) and in argument where it wants more than one but we give an array so it understand it only one
+        sumFunc('LoneWolf', arr); 
+        // here we used this with spread operator
+        sumFunc('LoneWolf', ...arr); 
+        sumFunc('LoneWolf', ...arr); 
+        // used spread operator for cloning
+        let arr1 = [10,20,30];
+        let arr2 = arr1;
+        arr1.push(40);
+        console.log(`without spread Op: ${arr2}`); // expected output 10,20,30,40
+        // but with spread operator
+        let arr3 = [10,20,30];
+        let arr4 = [...arr3]; // cloning of arr3 into arr4
+        arr3.push(40);
+        console.log(`with spread Op: ${arr4}`); // expected output 10,20,30
+
+        function sumFunc(name, ...args){
+            let sum = 0;
+            for(let i in args){
+                sum += args[i];
+            }
+            console.log(`Hye ${name} ${sum}`);
+        }
+    </script>
+</body>
+</html>

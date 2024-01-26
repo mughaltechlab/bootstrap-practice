@@ -7,8 +7,18 @@
 </head>
 <body>
     
+    <!-- *Rest-Operator (three dots:  ... ) -->
     
     <script>
+        addWithoutRestOp(10,20,30);
+        function addWithoutRestOp(){
+            console.log(arguments);
+            let sum = 0;
+            for(i in arguments){
+                sum += arguments[i];
+            }
+            console.log(sum);
+        }
         // rest operator ... (three dots)
         sum('LoneWolf', 10,20,30,40,50);
         function sum(name, ...args){
