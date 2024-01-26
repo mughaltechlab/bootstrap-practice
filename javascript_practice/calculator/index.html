@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | JScript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+        body{
+            background: #004;
+            color: crimson;
+            width: 100vw;
+            height: 100vh;
+        }
+        .calculator{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: rgba(255, 255, 255, .1);
+            padding: 20px;
+        }
+        .inp-wrapper{
+            display: inherit;
+            flex-direction: column;
+        }
+        .inp-wrapper input{
+            border: none;
+            outline: none;
+            padding: 6px;
+
+        }
+        .result{
+            width: 100%;
+            padding: 5px;
+            height: 40px;
+            background: #413f3f;
+            color: aqua;
+            border: 2px solid aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .submit-btn{
+            padding: 5px;
+            width: 100%;
+            border-radius: 4px;
+            color: #004;
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: aqua;
+            border: 1px solid #004;
+            transition: all .2s ease-in-out;
+        }
+        .submit-btn:hover{
+            color: aqua;
+            background: #004;
+            border: 1px solid aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="result">0000</div>
+        <div class="inp-wrapper">
+        <input class="inpN" type="text" id="n1" placeholder="Enter value">
+        <select name="operation" id="operation">
+            <option value="" selected disabled>CHoose Operator</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+            <option value="**">**</option>
+        </select>
+        <input class="inpN" type="text" id="n2" placeholder="Enter value">
+        </div>
+        <button class="submit-btn">submit</button>
+    </div>
+
+    <script>
+        // variables
+        let num1 = document.querySelector('#n1');
+        let num2 = document.querySelector('#n2');
+        let operator = document.querySelector('#operation');
+        let submitBtn =document.querySelector('.submit-btn');
+        let result =document.querySelector('.result');
+        let wrapper =document.querySelector('.calculator');
+        let cursor =document.querySelector('.cursor');
+
+        
+        
+
+        // event listener on submit btn
+        submitBtn.addEventListener("click", calculator);
+        function calculator() {
+        v1 = parseFloat(num1.value);
+        v2 = parseFloat(num2.value);
+        op = operator.value;
+        console.log(v1);
+        if (op == "+") {
+            result.innerHTML = v1 + v2;
+        }else if (op == '-') {
+            result.innerHTML = v1 - v2;
+        }else if(op == '*'){
+            result.innerHTML = v1 * v2;
+        }else if(op == '/'){
+            result.innerHTML = v1 / v2;
+        }else if(op == '%'){
+            result.innerHTML = v1 % v2;
+        }else if(op == '**'){
+            result.innerHTML = v1 ** v2;
+        }
+        }
+
+        
+    </script>
+</body>
+</html>
