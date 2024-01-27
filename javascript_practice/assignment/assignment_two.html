@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2 | 27-jan-24 | saturday</title>
+</head>
+<body>
+    <h3>hhh</h3>
+
+    <script>
+        let h = document.querySelector('h3');
+        // array
+        let arr = [10,20,30,40,50];
+        let i = 0;
+        let k = arr.length - 1;
+        let j = false;
+        setInterval(()=>{
+            if(i < arr.length || i === 0){
+                console.log('hye')
+                h.innerHTML = arr[i];
+                i++;
+                if (i == arr.length -1) {
+                    j = true;
+                    k = 5;
+                }
+            }else if(j){
+                console.log('false')
+                k--;
+                if(k >= 0){
+                    h.innerHTML = arr[k];
+                }else{
+                    i = 0;
+                }
+                
+            }
+            
+        },1000);
+
+
+
+    </script>
+</body>
+</html>

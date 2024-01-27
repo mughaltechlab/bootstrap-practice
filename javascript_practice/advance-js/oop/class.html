@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Js | OOP | class and object</title>
+</head>
+<body>
+    
+    <!-- 
+        * OOP | Class | Object
+        * three types method,
+        * 1. constructor
+        * 2. prototype
+        * 3. static
+     -->
+
+    <script>
+        // class
+        class Car{
+            speed = 0;
+            // constructor method self call.
+            constructor(){
+                console.log(`Car Start speed: ${this.speed}`);
+            }
+            // prototype method, call by name when we want
+            turbo(){
+
+                setTimeout(() => {
+                    
+                    var id = setInterval(()=>{
+                        var sp = this.speed++
+                        console.clear();
+                        console.log(`Speed Up.... ${sp}`);
+                        if (sp > 10) {
+                            clearInterval(id);
+                        }
+                    }, 500); 
+                }, 5000);
+            }
+            break(){
+                setTimeout(()=>{
+
+                    console.log('drift,,Breakkkkkk...!');
+                }, 15000);
+            }
+            // static method: doesn't need to create object, we can call it without creating object;
+            static horn(){
+                console.log('hornnnnnnn..!')
+            }
+        }
+        // Car.horn();
+        // let f1 = new Car();   //automatically call cnstructor
+        // f1.turbo();
+        // f1.break();
+
+        /**
+         * * other class()
+         * * concentrate on how to set variables and how to call them
+        */
+       class TeacherData{
+        constructor(){
+            let teacherName;
+            console.log(`Teacher Data : `);
+        }
+
+        english(){
+            console.log(`English Teacher name is: ${this.teacherName}`);
+        }
+        math(){
+            console.log(`Math Teacher name is: ${this.teacherName}`);
+        }
+       }
+
+       let visionSchool = new TeacherData();
+       visionSchool.teacherName = 'Saddam' ;
+       visionSchool.english();  
+       visionSchool.teacherName = 'Atif' ;
+       visionSchool.math();  
+
+
+    </script>
+</body>
+</html>
