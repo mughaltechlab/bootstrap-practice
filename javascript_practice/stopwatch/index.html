@@ -4,11 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background: #031;
+            color: coral;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /*   cursor: none; */
+        }
+        .clock {
+            font-size: max(10vw, 3rem);
+        }
+
+    </style>
 </head>
 <body>
     
-    
+    <div class="clock">
+        <span id="hours">00</span>:
+        <span id="mins">00</span>:
+        <span id="secs">00</span>:
+        <span id="tens">00</span>
+    </div>
+    <div class="buttons">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
 
-    <script></script>
+    <script>
+        // time variables
+        let t = '00';
+        let s = '00';
+        let m = '00';
+        let h = '00';
+        let id;
+        let hr = document.getElementById("hours");
+        let min = document.getElementById("mins");
+        let sec = document.getElementById("secs");
+        let ten = document.getElementById("tens");
+        // buttons
+        let startBtn = document.getElementById("start");
+        let stopBtn = document.getElementById("stop");
+        let resetBtn = document.getElementById("reset");
+        function startFunc() {
+            t++;
+            if (t < 9) {
+                ten.innerHTML = "0" + t;
+            }
+            if (t > 9) {
+                ten.innerHTML = t;
+            }
+            if (t > 98) {
+                t = 0;
+                s++;
+                sec.innerHTML = "0" + s;
+            }
+            if (s > 9) {
+                sec.innerHTML = s;
+            }
+            if (s > 59) {
+                m++;
+                s = 0;
+                min.innerHTMl = "0" + m;
+            }
+            if (m > 9) {
+                min.innerHTML = m;
+            }
+            if (m > 59) {
+                h++;
+                hr.innerHTML = "0" + h;
+            }
+            if (h > 9) {
+                hr.innerHTML = h;
+            }
+        }
+
+        // start btn func
+        startBtn.addEventListener("click", () => {
+            id = setInterval(startFunc, 10);
+        });
+        // stop btn func
+        stopBtn.addEventListener("click", () => {
+            clearInterval(id);
+        });
+        // reset btn func
+        resetBtn.addEventListener("click", () => {
+            clearInterval(id);
+            console.log(`${h} : ${m} : ${s} : ${t}`);
+            t = '00';
+            s = '00';
+            m = '00';
+            h = '00';
+            console.log(`${h} : ${m} : ${s} : ${t}`);
+            ten.innerHTML =  t;
+            sec.innerHTML =  s;
+            min.innerHTML =  m;
+            hr.innerHTML  =  h;
+            console.log(`${hr.innerHTML} : ${min.innerHTML} : ${sec.innerHTML} : ${ten.innerHTML}`);
+        });
+    </script>
 </body>
 </html>
