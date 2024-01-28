@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Js| OOP | Promise</title>
+</head>
+<body>
+    
+    <script>
+        // one way
+        let complete = true;
+        let prom = new Promise((resolve,reject)=>{
+            if(complete){
+                resolve("I am fullfiled");
+            }else{
+                reject("I am fullfiled");
+            }
+        });
+
+        // console.log(prom);
+
+        // other way
+        function promise(x){
+            return new Promise((success, error)=>{
+                if (x) {
+                    success('Successful');
+                }else{
+                    error('error...');
+                }
+            });
+        }
+        // console.log(promise(!true));
+
+        // efficient wway to use promises
+        function promise2(x){
+            return new Promise((success, error)=>{
+                console.log("loading.....");
+                setTimeout(()=>{
+                    if (x) {
+                        success('OK...');
+                    } else {
+                        error('Error...')
+                    }
+                }, 2000);
+            });
+        }
+
+        function onSuccess(result){ console.log(result) }
+        function onError(result){ console.log(result) }
+
+        promise2(false).then(onSuccess).catch(onError);
+
+
+    </script>
+</body>
+</html>
