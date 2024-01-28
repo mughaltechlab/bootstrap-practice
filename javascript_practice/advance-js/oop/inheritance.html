@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance js | OOP | inheritance</title>
+</head>
+<body>
+
+    <!-- * OOP | Inheritance -->
+    
+    <script>
+        // inheritance
+        class Employee{
+            constructor(name){
+                this.empname = name;
+                console.log('employee constructor ' + this.empname);
+            }
+        }
+
+        class Manager extends Employee{
+            constructor(n){
+                super(n);
+                console.log('manager constructor ')
+
+            }
+
+        }
+
+        let a = new Manager('LoneWolf');
+    </script>
+</body>
+</html>
