@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Js| ES6| Fetch</title>
+    <style>
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        var bd = document.body.style;
+        fetch("https://jsonplaceholder.typicode.com/todos")
+        .then((response)=> response.json())
+        .then((data)=>{
+            console.log(data);
+            document.write(`
+            <table border  style="border-color:#080 ; border-collapse:collapse">
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        TITLE
+                    </th>
+                </tr>
+                    `);
+            for(var i in data){
+                document.write(`
+                <tr>
+                <td>
+                    ${data[i].id}
+                </td>
+                <td>
+                    ${data[i].title}
+                </td>
+                </tr>
+                `);
+            }
+            document.write(`
+            </table>
+            `);
+        })
+        .catch((error)=>{
+            document.write(`
+            <h2 style="color:red">Network Error server not responding</h2>
+            `);
+        });
+    </script>
+</body>
+</html>
