@@ -1,0 +1,45 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------------------------- sidebar */
+
+#sidebar-wrapper{
+    /* height: 90%; */
+    flex-grow: 1;
+}
+
+/* sidebar-footer */
+#user-img{
+    width: 40px;
+    border-radius: 50px;
+}
+/*------------------------ chatpage */
+#chatpage-wrapper{
+    max-width: 600px;
+    position: relative;
+    margin-inline: auto;
+}
+#chatpage-userchat{
+    padding-bottom: 200x;
+}
+#userchat-img{
+    width: 20px;
+    border-radius: 50px;
+}
+#chatpage-footer{
+    max-width: 600px;
+    width: 100%;
+}
+
+
+/** responsive */
+@media (max-width: 768px){
+    .sidebar{
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+}
