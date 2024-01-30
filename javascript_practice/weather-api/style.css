@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: #2c3e50;
+}
+#formDiv{
+    max-width:max(50%,300px)  ;
+    margin-inline: auto;
+}
+#data-container{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
