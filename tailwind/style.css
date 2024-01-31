@@ -1,14 +1,75 @@
+:root{
+    --primary : #000000;
+    --secondary : #f1f1f1;
+}
 *, *::after, *::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* ----universal----- */
+.mytransition{
+    transition: all .55s ease-in-out;
+}
 
+.mytransition-2{
+    transition: transform .55s ease-in-out;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    width: 50px;
+    scrollbar-gutter: sabtle;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
 /*------------------------- sidebar */
+.sidebar{
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    animation: sidebar-anime .55s ease-in-out;
+    background: var(--primary);
+    color: var(--secondary);
+}
+@keyframes sidebar-anime {
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.sidebar-none{
+    display: none;
+}
+#menu-icon{
+    display: none;
+}
+#menu-btn-lg{
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    /* left: 0; */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+#menu-close-btn{
+    display: none;
+}
 
 #sidebar-wrapper{
     /* height: 90%; */
     flex-grow: 1;
+}
+#sidebar-header, #sidebar-footer{
+    background: var(--primary);
+}
+#sidebar-chats-list{
+    /* overflow: scroll; */
 }
 
 /* sidebar-footer */
@@ -17,10 +78,25 @@
     border-radius: 50px;
 }
 /*------------------------ chatpage */
+.chatpage{
+    width: 100%;
+}
+
 #chatpage-wrapper{
     max-width: 600px;
     position: relative;
     margin-inline: auto;
+}
+#form{
+    max-width: 600px;
+    margin-left: -14vw;
+    position: relative;
+    text-align: center;
+
+    
+}
+#form input{
+    width: 100%;
 }
 #chatpage-userchat{
     padding-bottom: 200x;
@@ -30,16 +106,37 @@
     border-radius: 50px;
 }
 #chatpage-footer{
-    max-width: 600px;
+    /* max-width: 600px; */
     width: 100%;
 }
 
 
-/** responsive */
+/** -------responsive------ */
 @media (max-width: 768px){
+    /** sidebar */
     .sidebar{
         display: none;
-        position: absolute;
+        position: fixed;
         z-index: 1;
+    }
+    #menu-icon{
+        display: block;
+    }
+    #menu-btn-lg{
+        display: none;
+    }
+    #menu-close-btn{
+        display: block;
+    }
+    /* *----chatpaage--- */
+    #form{
+        max-width: 600px;
+        /* margin-left: -10vw; */
+        margin-inline: auto;
+        text-align: center;
+        /* align-items: center; */
+        /* justify-content: center; */
+        position: relative;
+        
     }
 }
