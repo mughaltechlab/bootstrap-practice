@@ -4,6 +4,7 @@
     --hover: #3ccc;
     --user-chat-bg: #ecf0f1;
     --light-blue: #dbeafe;
+    --extra-light-blue: #e7f1ff;
 }
 *, *::after, *::before{
     margin: 0;
@@ -12,9 +13,10 @@
 }
 /* ----universal----- */
 .myshadow{
-    border-radius: 20px ;
+    border-radius: 10px ;
     border-top-left-radius: 2px;
-    background: #ecf0f1;
+    background: var(--extra-light-blue);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
     padding: 4px;
 }
 .mytransition{
@@ -28,11 +30,15 @@
 ::-webkit-scrollbar{
     width: 5px;
 }
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+     margin: 20px;
+}
 ::-webkit-scrollbar-thumb{
     width: 50px;
-    scrollbar-gutter: sabtle;
     background: rgba(0, 0, 0, .2);
     border-radius: 5px;
+    background-clip: padding-box;
 }
 /*------------------------- sidebar */
 .sidebar{
@@ -42,7 +48,6 @@
     z-index: 1;
     background: var(--primary);
     color: var(--secondary);
-    /* animation: sidebar-anime .25s ease-in-out; */
 }
 @keyframes sidebar-anime {
     from{
@@ -63,7 +68,6 @@
     position: fixed;
     z-index: 100;
     top: 50%;
-    /* left: 0; */
     transform: translateY(-50%);
     cursor: pointer;
 }
@@ -72,7 +76,6 @@
     cursor: pointer;
 }
 #sidebar-wrapper{
-    /* height: 90%; */
     flex-grow: 1;
 }
 .user-chat-list li{
@@ -96,7 +99,7 @@
     width: 40px;
     border-radius: 50px;
 }
-/*------------------------ chatpage */
+/*------------------------ chatpage-styles-- */
 .chatpage{
     width: 100%;
     position: absolute;
@@ -112,19 +115,20 @@
 }
 #chatpage-wrapper{
     max-width: 600px;
-    /* position: relative; */
+    margin-top: 50px;
     margin-inline: auto;
     flex-grow: 1;
+    font-size: 14px;
 }
 #chatpage-header, #chatpage-footer{
     background: var(--light-blue);
 }
+#userchat #userchat-img{
+    width: 30px;
+    border-radius: 50%;
+}
 #form{
     width: min(60%,600px);
-    /* min-width: 50%;
-    max-width: 600px; */
-    /* max-width: 800px; */
-    /* margin-left: -14vw; */
     position: relative;
     text-align: center; 
 }
@@ -139,7 +143,6 @@
     border-radius: 50px;
 }
 #chatpage-footer{
-    /* max-width: 600px; */
     width: 100%;
 
 }
@@ -173,16 +176,12 @@
     }
     /* *----chatpaage--- */
     .chatpage{
-        /* width: 100%; */
         margin-left: 0;
     }
     #form{
         width: 600px;
-        /* margin-left: -10vw; */
         margin-inline: auto;
         text-align: center;
-        /* align-items: center; */
-        /* justify-content: center; */
         position: relative;
         
     }
