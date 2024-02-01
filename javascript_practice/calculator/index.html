@@ -51,7 +51,7 @@
             align-items: center;
             justify-content: center;
         }
-        .submit-btn{
+        .btn{
             padding: 5px;
             width: 100%;
             border-radius: 4px;
@@ -64,10 +64,13 @@
             border: 1px solid #004;
             transition: all .2s ease-in-out;
         }
-        .submit-btn:hover{
+        .btn:hover{
             color: aqua;
             background: #004;
             border: 1px solid aqua;
+        }
+        #hr{
+            background: yellow;
         }
         
     </style>
@@ -88,18 +91,29 @@
         </select>
         <input class="inpN" type="text" id="n2" placeholder="Enter value">
         </div>
-        <button class="submit-btn">submit</button>
+        <button id="submit-btn" class="btn">submit</button>
+        <button id="close-btn" class="btn">History</button>
     </div>
+    <div id="history">
+        <ul id="history-ul">
+            <li>2+2=5</li>
+            <li>2+2=5</li>
+            <li>2+2=5</li>
+        </ul>
+    </div>
+    <hr id="hr">
 
     <script>
         // variables
         let num1 = document.querySelector('#n1');
         let num2 = document.querySelector('#n2');
         let operator = document.querySelector('#operation');
-        let submitBtn =document.querySelector('.submit-btn');
-        let result =document.querySelector('.result');
-        let wrapper =document.querySelector('.calculator');
-        let cursor =document.querySelector('.cursor');
+        let submitBtn = document.querySelector('#submit-btn');
+        let closeBtn = document.querySelector('#close-btn');
+        let result = document.querySelector('.result');
+        let wrapper = document.querySelector('.calculator');
+        let historyList = document.querySelector('#history-ul');
+        let cursor = document.querySelector('.cursor');
 
         
         
@@ -107,9 +121,9 @@
         // event listener on submit btn
         submitBtn.addEventListener("click", calculator);
         function calculator() {
-        v1 = parseFloat(num1.value);
-        v2 = parseFloat(num2.value);
-        op = operator.value;
+        let v1 = parseFloat(num1.value);
+        let v2 = parseFloat(num2.value);
+        let op = operator.value;
         console.log(v1);
         if (op == "+") {
             result.innerHTML = v1 + v2;
@@ -124,8 +138,15 @@
         }else if(op == '**'){
             result.innerHTML = v1 ** v2;
         }
+        document.cookie = `${v1}${op}${v2}=${result.innerText}`;
+        console.log(document.cookie);
         }
-
+        // history function
+        closeBtn.addEventListener('click',()=>{
+            let cookieArr = document.cookie.split(';');
+            console.log(cookieArr);
+        });
+        // delete cookie with expire date option (expires=Thu, 01 Jan 1970 00:00:01 GMT;)
         
     </script>
 </body>
