@@ -12,10 +12,33 @@
             font-family: monospace;
         }
         body{
+            overflow: hidden;
             background: #004;
             color: crimson;
             width: 100vw;
             height: 100vh;
+        }
+        body::before{
+            content: '';
+            background: rgba(85, 245, 149, 0.219);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation: body-bg-anime 1s ease-in-out;
+        }
+        @keyframes body-bg-anime {
+            from{
+                width: 100vw;
+                height: 100vh;
+                border-radius: 0;
+            }
+            to{
+                width: 0;
+                height: 0;
+                border-radius: 50vw;
+
+            }
         }
         .calculator{
             display: flex;
@@ -29,6 +52,16 @@
             transform: translate(-50%,-50%);
             background: rgba(255, 255, 255, .1);
             padding: 20px;
+            animation: calculator-display-anime 2s infinite;
+            transition: background 1s ease-in-out;
+        }
+        @keyframes calculator-display-anime {
+            from{
+                background: rgba(85, 245, 149, 0.219);
+            }
+            to{
+                background: rgba(96, 240, 206, 0.281);
+            }
         }
         .inp-wrapper{
             display: inherit;
@@ -69,9 +102,31 @@
             background: #004;
             border: 1px solid aqua;
         }
-        #hr{
-            background: yellow;
+        #history{
+            overflow-y: scroll;
+            height: 100px;
+            width: 100%;
+            color: aqua;
+            text-align: center;
+            letter-spacing: 2px;
         }
+        #history::-webkit-scrollbar{
+            width: 5px;
+        }
+        #history::-webkit-scrollbar-track{
+            border-radius: 10px;
+            margin-block: 5px;
+            
+        }
+        #history::-webkit-scrollbar-thumb{
+            /* background-color: aqua; */
+            border: 1px solid aqua;
+            border-radius: 20px;
+        }
+        #history::-webkit-scrollbar-thumb:hover{
+            background: aqua;
+        }
+        
         
     </style>
 </head>
@@ -92,16 +147,12 @@
         <input class="inpN" type="text" id="n2" placeholder="Enter value">
         </div>
         <button id="submit-btn" class="btn">submit</button>
-        <button id="close-btn" class="btn">History</button>
+        <button id="history-btn" class="btn">History</button>
+        <div id="history">
+            <ul id="history-ul">
+            </ul>
+        </div>
     </div>
-    <div id="history">
-        <ul id="history-ul">
-            <li>2+2=5</li>
-            <li>2+2=5</li>
-            <li>2+2=5</li>
-        </ul>
-    </div>
-    <hr id="hr">
 
     <script>
         // variables
@@ -109,7 +160,7 @@
         let num2 = document.querySelector('#n2');
         let operator = document.querySelector('#operation');
         let submitBtn = document.querySelector('#submit-btn');
-        let closeBtn = document.querySelector('#close-btn');
+        let historyBtn = document.querySelector('#history-btn');
         let result = document.querySelector('.result');
         let wrapper = document.querySelector('.calculator');
         let historyList = document.querySelector('#history-ul');
@@ -142,9 +193,13 @@
         console.log(document.cookie);
         }
         // history function
-        closeBtn.addEventListener('click',()=>{
+        historyBtn.addEventListener('click',()=>{
             let cookieArr = document.cookie.split(';');
             console.log(cookieArr);
+            historyList.innerHTML = cookieArr.map(singleCookie=>`<li>${singleCookie}</li>`)
+            .join(` `)
+            // .join(`<br>`)
+            ;
         });
         // delete cookie with expire date option (expires=Thu, 01 Jan 1970 00:00:01 GMT;)
         
