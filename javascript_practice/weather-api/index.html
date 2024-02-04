@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="container-fluid p-0 bg-dark vh-100 overflow-hidden">
 
     <header class="container-fluid text-center py-3">
         <!-- title -->
         <div class="display-6 fw-normal text-light">WEATHER APP</div>
     </header>
-    <main class="container-fluid">
+    <main class=" h-100">
         <!-- form -->
         <div class="row">
-            <div class="col py-3 bg-dark">
+            <div class="col py-3 ">
                 <form class="">
                     <div class="form-group d-flex gap-2" id="formDiv">
                         <input type="text" class="form-control" placeholder="Enter city name" id="cityInp">
@@ -28,13 +28,21 @@
         <!-- weather data -->
         <div class="row">
             <!-- data wrapper -->
-            <div class="container bg-dark d-flex" id="data-container">
+            <div class="d-flex" id="data-container">
+
+                
                 <!-- icon -->
                 <div id="icon">
                     <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="weather-icon">
                 </div>
-                <div id="description" class=".display-4 text-light">Clear Sky</div>
-                <!--  -->
+                <div>
+                    <!-- description -->
+                    <div id="description" class=" ">Clear Sky</div>
+                    <!-- temp -->
+                    <div class="display-6 ">
+                        <span id="temp" class="fw-bold">12</span>°
+                    </div>
+                </div>
 
 
             </div>

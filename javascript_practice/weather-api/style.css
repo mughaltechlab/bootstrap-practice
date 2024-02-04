@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 header{
     background: #2c3e50;
 }
@@ -13,5 +14,22 @@ header{
 #data-container{
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    background: rgba( 0, 0, 0, .8) ;
+    box-shadow: 0 0 20px 0px rgba( 250, 250, 250, .6),
+                inset 0 0 10px 0px rgba( 0, 255, 255, .6)
+    ;
+    color: #4fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 12px;
+}
+#data-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px rgba( 250, 250, 250, .6),
+                inset 0 0 10px 2px rgba(0, 255, 255, 0.744)
+    ;
 }
