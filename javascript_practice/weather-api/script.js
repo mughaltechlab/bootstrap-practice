@@ -2,7 +2,8 @@
 // icon url = https://openweathermap.org/img/wn/04n@2x.png
 const apiKey = "1be04f41aab825421a7ab4e25dcb19dd";
 
-// get document elments
+// get document elments 
+const dataContainer = document.querySelector('#data-container');
 const cityInp = document.querySelector('#cityInp');
 const icon = document.querySelector('#icon');
 const okBtn = document.querySelector('#submit-btn');
@@ -14,6 +15,7 @@ const temperature = document.querySelector('#temp');
 okBtn.addEventListener('click',()=>{
     // get input value
     let cityN = cityInp.value;
+    dataContainer.style.display = 'flex';
 
     getData(cityN);
 });
@@ -25,6 +27,12 @@ async function getData(value){
         //*   check response status if not ok 
        if (!res.ok) {
            console.log('error');
+            // set icon
+            icon.innerHTML = ` <i class="bi bi-infinity"></i> `;
+            // set description
+            description.innerHTML = "";
+            // set temperature
+            temperature.innerHTML = "";
        }else{
 
             // convert response data into json format
@@ -42,14 +50,19 @@ async function getData(value){
             // set description
             description.innerHTML = des;
             // set temperature
-            temperature.innerHTML = temp;
+            temperature.innerHTML = temp + "°";
             console.log(temp);
             console.log(data);
 
 
        }
     } catch (e) {
-        
+            // set icon
+            icon.innerHTML = ` <i class="bi bi-infinity"></i> `;
+            // set description
+            description.innerHTML = "";
+            // set temperature
+            temperature.innerHTML = "";
     }
     
 
