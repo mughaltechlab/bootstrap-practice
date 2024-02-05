@@ -11,6 +11,15 @@ const description = document.querySelector('#description');
 const temperature = document.querySelector('#temp');
 
 
+// form event
+document.querySelector('form').addEventListener('submit',(e)=>{
+    e.preventDefault();
+    // get input value
+    let cityN = cityInp.value;
+    dataContainer.style.display = 'flex';
+
+    getData(cityN);
+});
 // event listener on OKBTN
 okBtn.addEventListener('click',()=>{
     // get input value
