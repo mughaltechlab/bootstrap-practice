@@ -11,6 +11,8 @@ const description = document.querySelector('#description');
 const temperature = document.querySelector('#temp');
 
 
+
+
 // form event
 document.querySelector('form').addEventListener('submit',(e)=>{
     e.preventDefault();
