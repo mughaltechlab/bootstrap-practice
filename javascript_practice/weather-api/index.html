@@ -17,29 +17,7 @@
 
 
     <header class="container-fluid text-center py-3">
-        <!-- !iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii -->
-
-        <div class="input-group mb-3">
-            <input class="form-control" id="password" name="password" placeholder="Password" value="">
-            <span class="input-group-text"><i class="far fa-eye-slash" id="togglePassword"></i></span>
-        </div>
-
-        <script>
-            const togglePassword = document.querySelector("#togglePassword");
-            const password = document.querySelector("#password");
-
-            togglePassword.addEventListener("click", function () {
-
-                // toggle the type attribute
-                const type = password.getAttribute("type") === "password" ? "text" : "password";
-                password.setAttribute("type", type);
-
-                // toggle the eye icon
-                this.classList.toggle('fa-eye');
-            });
-        </script>
-
-        <!-- !iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii -->
+        
         <!-- title -->
         <div class="display-6 fw-normal text-light">WEATHER APP</div>
     </header>
